@@ -33,7 +33,6 @@ const Messages = props => {
           className="form-control"/>
       </form>
       <Button
-  
         onClick={() => _handleClick()}
         style={{
         marginTop: 10

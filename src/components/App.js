@@ -10,7 +10,8 @@ class App extends Component {
         <Row>
 
           <h1 style={{
-            textAlign: "center"
+            textAlign: "center",
+            paddingBottom: 30,
           }}>Chat Room
           </h1>
 
