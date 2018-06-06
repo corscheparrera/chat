@@ -34,7 +34,7 @@ export default class Chat extends Component {
   componentDidMount() {
     console.log(this.props.path);
     database
-      .ref(`allChat/chat${this.props.path}`)
+      .ref(`${this.props.path}`)
       .on("child_added", x => this.updateState(x.val()));
   }
 

@@ -20,7 +20,7 @@ class App extends Component {
   getUserId = () => {
     const url = window.location.href;
     const id = url.replace("http://localhost:3000/", "");
-    this.setState({ chatId: id });
+    this.setState({ chatId: `allChat/chat${id}` });
   };
 
   render() {
