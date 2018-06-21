@@ -6,7 +6,7 @@ import React from "react";
 import styled from "styled-components";
 
 const avocat = {
-  name: "Maître Harvey"
+  email: "Maître Harvey"
 };
 
 const TitleChat = styled.h1`

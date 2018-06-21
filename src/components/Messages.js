@@ -1,6 +1,5 @@
 import Moment from "react-moment";
 import React from "react";
-
 const msgStyleLawyer = {
   color: "#FFFFFF",
   backgroundColor: "#0074D9",
@@ -25,12 +24,12 @@ function renderMessanges(data, i) {
   return (
     <div
       style={
-        data.user.name === "Maître Harvey" ? msgStyleLawyer : msgStyleClient
+        data.user.email === "Maître Harvey" ? msgStyleLawyer : msgStyleClient
       }
       key={i}
     >
       <div>
-        {data.user.name}: {data.text}
+        {data.user.email}: {data.text}
       </div>
       <div>
         <Moment fromNow>{data.createdAt}</Moment>

@@ -1,12 +1,6 @@
-import {
-  Button,
-  ControlLabel,
-  Form,
-  FormControl,
-  FormGroup
-} from "react-bootstrap";
 import React, { Component } from "react";
 
+import { Button } from "react-bootstrap";
 import fire from "./Firebase.js";
 import firebase from "firebase";
 
