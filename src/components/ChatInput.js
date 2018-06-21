@@ -1,6 +1,12 @@
+import {
+  Button,
+  ControlLabel,
+  Form,
+  FormControl,
+  FormGroup
+} from "react-bootstrap";
 import React, { Component } from "react";
 
-import { Button } from "react-bootstrap";
 import fire from "./Firebase.js";
 import firebase from "firebase";
 
@@ -30,10 +36,10 @@ const Messages = props => {
   };
   return (
     <div>
-      <form className="chat-input" onSubmit={sendMessage}>
+      <form className="form-inline" onSubmit={sendMessage}>
         <input
           style={{
-            marginTop: 30
+            width: 250
           }}
           type="text"
           ref={r => (this.userInput = r)}
@@ -41,15 +47,8 @@ const Messages = props => {
           required
           className="form-control"
         />
+        <Button onClick={() => _handleClick()}>Envoyer</Button>
       </form>
-      <Button
-        onClick={() => _handleClick()}
-        style={{
-          marginTop: 10
-        }}
-      >
-        Envoyer
-      </Button>
     </div>
   );
 };

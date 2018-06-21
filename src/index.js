@@ -1,8 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './components/App'
-import registerServiceWorker from './registerServiceWorker'
+import "./index.css";
 
-ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()
+import { BrowserRouter, Route } from "react-router-dom";
+
+// import App from "./components/App";
+import Main from "./components/Main";
+import React from "react";
+import ReactDOM from "react-dom";
+import registerServiceWorker from "./registerServiceWorker";
+
+const App = () => (
+  <BrowserRouter>
+    <Route path="/" component={Main} />
+  </BrowserRouter>
+);
+
+ReactDOM.render(<App />, document.getElementById("root"));
+registerServiceWorker();

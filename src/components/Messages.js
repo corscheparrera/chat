@@ -1,55 +1,44 @@
-import React, {Component} from 'react'
-import Moment from 'react-moment';
+import Moment from "react-moment";
+import React from "react";
 
-export default class Messages extends Component {
-
-  renderMessanges = (data, i) => {
-    return (
-
-      <div
-        style={data.user.name === 'Maître Harvey'
-        ? msgStyleLawyer
-        : msgStyleClient}
-        key={i}>
-        <div>
-          {data.user.name}: {data.text}
-        </div>
-        <div>
-          <Moment fromNow>{data.createdAt}</Moment>
-          { ' / ' }<Moment format="YYYY/MM/DD">{data.createdAt}</Moment>
-        </div>
-
-      </div>
-
-    )
-  }
-  render() {
-    return <div >
-      {this
-        .props
-        .chat
-        .map(this.renderMessanges)}
-
-    </div>
-
-  }
-}
 const msgStyleLawyer = {
   color: "#FFFFFF",
-  backgroundColor: '#0074D9',
-  width: '40%',
-  marginLeft: '45%',
+  backgroundColor: "#0074D9",
+  width: "40%",
+  marginLeft: "45%",
   padding: 20,
-  borderColor: 'transparent',
+  borderColor: "transparent",
   borderRadius: 5,
   marginBottom: 10
 };
 const msgStyleClient = {
-  backgroundColor: '#A9A9A9',
-  width: '40%',
+  backgroundColor: "#A9A9A9",
+  width: "40%",
   padding: 20,
-  borderColor: 'transparent',
+  borderColor: "transparent",
   borderRadius: 5,
   marginBottom: 10,
   color: "#FFFFFF"
 };
+
+function renderMessanges(data, i) {
+  return (
+    <div
+      style={
+        data.user.name === "Maître Harvey" ? msgStyleLawyer : msgStyleClient
+      }
+      key={i}
+    >
+      <div>
+        {data.user.name}: {data.text}
+      </div>
+      <div>
+        <Moment fromNow>{data.createdAt}</Moment>
+        {" / "}
+        <Moment format="YYYY/MM/DD">{data.createdAt}</Moment>
+      </div>
+    </div>
+  );
+}
+const Messages = props => <div>{props.chat.map(renderMessanges)}</div>;
+export default Messages;
