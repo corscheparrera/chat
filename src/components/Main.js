@@ -2,7 +2,6 @@ import { Col, Grid, Row } from "react-bootstrap";
 import React, { Component } from "react";
 
 import Chat from "./Chat.js";
-import Moment from "react-moment";
 import fire from "./Firebase.js";
 import styled from "styled-components";
 
@@ -18,7 +17,7 @@ const UserList = styled.div`
 `;
 
 const UserDiv = styled.div`
-  height: 80px;
+  height: 40px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -29,6 +28,12 @@ const UserDiv = styled.div`
     background: #a9a9a9;
     cursor: pointer;
   }
+
+  ${({ active }) =>
+    active &&
+    `
+  background: #00FF7F;
+  `};
 `;
 
 const UserRow = styled.div`
@@ -113,18 +118,29 @@ class Main extends Component {
     this.props.history.push(`/${newID}`);
     this.getChatPath();
   };
+
+  checkIfCurrentlyViewed = email => {
+    if (email === this.state.email) {
+      return "active";
+    }
+  };
   renderUsers = (data, i) => {
     console.log(data);
     return (
-      <UserDiv key={i} id={data.uid} onClick={() => this.selectConvo(data.uid)}>
+      <UserDiv
+        active={this.checkIfCurrentlyViewed(data.email)}
+        key={i}
+        id={data.uid}
+        onClick={() => this.selectConvo(data.uid)}
+      >
         <UserRow>
           <Bold>{"Email: "}</Bold>
           <h5>{data.email}</h5>
         </UserRow>
-        <UserRow>
+        {/* <UserRow>
           <Bold>{"Dernière connexion: "}</Bold>
           <h5>{<Moment fromNow>{data.metadata.lastSignInTime}</Moment>}</h5>
-        </UserRow>
+        </UserRow> */}
       </UserDiv>
     );
   };
