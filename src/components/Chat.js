@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import ChatInput from "./ChatInput";
 import Messages from "./Messages";
 import fire from "./Firebase.js";
-import firebase from "firebase";
 
 const database = fire.database();
 const avocat = {
@@ -36,6 +35,11 @@ export default class Chat extends Component {
     database
       .ref(`${this.props.path}`)
       .on("child_added", x => this.updateState(x.val()));
+    database.ref(`${this.props.path}`).once("value", result => {
+      let email = result.val()[Object.keys(result.val())[0]].user.email;
+      console.log(email);
+      this.props.getUserEmail(email);
+    });
   }
 
   updateState = data => {

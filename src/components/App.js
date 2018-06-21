@@ -9,7 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      chatId: ""
+      chatId: "",
+      email: ""
     };
   }
 
@@ -23,22 +24,34 @@ class App extends Component {
     this.setState({ chatId: `allChat/chat${id}` });
   };
 
+  getUserEmail = data => {
+    this.setState({ email: data });
+  };
   render() {
     return (
       <Grid>
         <Row>
           <h1
             style={{
-              textAlign: "center",
-              paddingBottom: 30
+              textAlign: "center"
             }}
           >
             Chat Room
           </h1>
         </Row>
         <Row>
+          <h4
+            style={{
+              textAlign: "center",
+              paddingBottom: 30
+            }}
+          >
+            Client: {this.state.email}
+          </h4>
+        </Row>
+        <Row>
           <Col sm={12}>
-            <Chat path={this.state.chatId} />
+            <Chat path={this.state.chatId} getUserEmail={this.getUserEmail} />
           </Col>
         </Row>
       </Grid>
