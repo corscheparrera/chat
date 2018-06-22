@@ -2,6 +2,7 @@ import { Col, Grid, Row } from "react-bootstrap";
 import React, { Component } from "react";
 
 import Chat from "./Chat.js";
+import SripeIcon from "react-icons/lib/fa/cc-stripe";
 import fire from "./Firebase.js";
 import styled from "styled-components";
 
@@ -81,13 +82,7 @@ class Main extends Component {
     console.log(users);
 
     for (var key in users) {
-      // skip loop if the property is from prototype
-      if (!users.hasOwnProperty(key)) continue;
-
-      var obj = users[key];
-      for (var prop in obj) {
-        arrayOfUsers.push(obj[prop]);
-      }
+      arrayOfUsers.push(users[key]);
     }
     console.log(arrayOfUsers);
     this.setState({ users: arrayOfUsers }, () => this.startChat());
@@ -100,7 +95,7 @@ class Main extends Component {
         .ref(`${this.state.chatPath}`)
         .on("child_added", x => this.updateState(x.val()));
       database.ref(`${this.state.userPath}`).once("value", result => {
-        let email = result.val()[Object.keys(result.val())[0]].email;
+        let email = result.val().email;
         this.setState({ email });
       });
     } catch (e) {
@@ -136,6 +131,7 @@ class Main extends Component {
         <UserRow>
           <Bold>{"Email: "}</Bold>
           <h5>{data.email}</h5>
+          <SripeIcon size={40} style={{ paddingLeft: 10 }} />
         </UserRow>
         {/* <UserRow>
           <Bold>{"Dernière connexion: "}</Bold>
