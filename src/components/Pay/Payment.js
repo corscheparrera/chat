@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Checkout from "./Checkout";
 import { Jumbotron } from "react-bootstrap";
 import styled from "styled-components";
 import axios from "axios";
