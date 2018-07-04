@@ -107,7 +107,8 @@ class Payment extends Component {
         description,
         source: token.id,
         currency: CURRENCY,
-        amount: this.fromCanToCent(amount)
+        amount: this.fromCanToCent(amount),
+        receipt_email: token.email
       })
       .then(this.successPayment)
       .catch(this.errorPayment);
