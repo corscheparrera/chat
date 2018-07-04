@@ -32,9 +32,9 @@ const onToken = (amount, description) => token =>
 
 const Checkout = ({ name, description, amount }) => (
   <StripeCheckout
-    name={name}
-    description={description}
-    amount={fromCanToCent(amount)}
+    name={"Facture pour honoraires"}
+    description={"Maître Marc-Antoine Harvey"}
+    amount={fromCanToCent(this.state.amount)}
     token={onToken(amount, description)}
     currency={CURRENCY}
     stripeKey={STRIPE_PUBLISHABLE}

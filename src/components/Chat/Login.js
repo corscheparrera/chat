@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 import fire from "./Firebase";
-import {
-  FormGroup,
-  ControlLabel,
-  HelpBlock,
-  Button,
-  FormControl
-} from "react-bootstrap";
+import { Button, FormControl } from "react-bootstrap";
 import styled from "styled-components";
 
 const LoginForm = styled.form`

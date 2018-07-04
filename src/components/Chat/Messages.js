@@ -4,6 +4,7 @@ const msgStyleLawyer = {
   color: "#FFFFFF",
   backgroundColor: "#0074D9",
   width: "40%",
+  wordWrap: "break-word",
   marginLeft: "45%",
   padding: 20,
   borderColor: "transparent",
@@ -13,6 +14,7 @@ const msgStyleLawyer = {
 const msgStyleClient = {
   backgroundColor: "#A9A9A9",
   width: "40%",
+  wordWrap: "break-word",
   padding: 20,
   borderColor: "transparent",
   borderRadius: 5,

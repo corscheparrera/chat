@@ -33,13 +33,12 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
           <PrivateRoute
-            exact
             path="/chat"
             component={Main}
             authenticated={this.state.authenticated}
           />
 
-          <Route exact path="/charge" component={Payment} />
+          <Route path="/charge" component={Payment} />
           <Route exact path="/login" component={Login} />
         </div>
       </BrowserRouter>
