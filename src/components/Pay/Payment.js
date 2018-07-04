@@ -1,11 +1,20 @@
 import React, { Component } from "react";
+import Checkout from "./Checkout";
 
-export default class Payment extends Component {
+class Payment extends Component {
   render() {
     return (
-      <div>
-        <h1>Heloo</h1>
+      <div className="App">
+        <p className="App-intro">
+          <Checkout
+            name={"The Road to learn React"}
+            description={"Open Source React Book"}
+            amount={1}
+          />
+        </p>
       </div>
     );
   }
 }
+
+export default Payment;
