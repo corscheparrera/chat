@@ -59,7 +59,7 @@ class Main extends Component {
 
   getChatPath = () => {
     const url = window.location.href;
-    const id = url.replace("http://localhost:3000/", "");
+    const id = url.replace("http://localhost:3000/chat/", "");
     this.setState(
       {
         userPath: `allUsers/${id}`,
@@ -90,13 +90,16 @@ class Main extends Component {
   startChat = async () => {
     try {
       await database.goOnline();
+
+      // get messages
       database
         .ref(`${this.state.chatPath}`)
         .on("child_added", x => this.updateState(x.val()));
-      database.ref(`${this.state.userPath}`).once("value", result => {
-        let email = result.val().email;
-        this.setState({ email });
-      });
+
+      // get user email
+      let snapshot = await database.ref(`${this.state.userPath}`).once("value");
+      let email = snapshot.val().email;
+      this.setState({ email });
     } catch (e) {
       console.log(e);
     }
@@ -109,7 +112,7 @@ class Main extends Component {
   };
 
   selectConvo = newID => {
-    this.props.history.push(`/${newID}`);
+    this.props.history.push(`/chat/${newID}`);
     this.getChatPath();
   };
 
