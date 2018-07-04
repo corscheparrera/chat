@@ -18,7 +18,7 @@ const UserList = styled.div`
 `;
 
 const UserDiv = styled.div`
-  height: 40px;
+  height: 60px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -79,12 +79,11 @@ class Main extends Component {
     const eventRef = database.ref("allUsers");
     const snapshot = await eventRef.once("value");
     const users = snapshot.val();
-    console.log(users);
 
     for (var key in users) {
       arrayOfUsers.push(users[key]);
     }
-    console.log(arrayOfUsers);
+
     this.setState({ users: arrayOfUsers }, () => this.startChat());
   };
 
@@ -120,7 +119,6 @@ class Main extends Component {
     }
   };
   renderUsers = (data, i) => {
-    console.log(data);
     return (
       <UserDiv
         active={this.checkIfCurrentlyViewed(data.email)}
@@ -129,14 +127,16 @@ class Main extends Component {
         onClick={() => this.selectConvo(data.uid)}
       >
         <UserRow>
+          <Bold>{"Nom:"} </Bold>
+          <h5>
+            {data.name} {data.lastName}
+          </h5>
+        </UserRow>
+        <UserRow>
           <Bold>{"Email: "}</Bold>
           <h5>{data.email}</h5>
           <SripeIcon size={40} style={{ paddingLeft: 10 }} />
         </UserRow>
-        {/* <UserRow>
-          <Bold>{"Dernière connexion: "}</Bold>
-          <h5>{<Moment fromNow>{data.metadata.lastSignInTime}</Moment>}</h5>
-        </UserRow> */}
       </UserDiv>
     );
   };
