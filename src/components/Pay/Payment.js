@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbotron } from "react-bootstrap";
+import logo from "../../images/logo_photo_ticekt_9.png";
 import styled from "styled-components";
 import axios from "axios";
 import StripeCheckout from "react-stripe-checkout";
@@ -62,9 +62,11 @@ class Payment extends Component {
     if (!this.state.paymentIsDone) {
       return (
         <Facture>
+          <img src={logo} alt="" style={{ height: "100px" }} />
           <div>
             <h2>Photo Ticket</h2>
           </div>
+
           <div style={{ textAlign: "center" }}>
             <h5>
               Règler la facture pour poursuivre votre conversation avec Maître
@@ -89,7 +91,8 @@ class Payment extends Component {
     } else if (this.state.paymentIsDone) {
       return (
         <Facture>
-          <div>
+          <img src={logo} alt="" style={{ height: "100px" }} />
+          <div style={{ textAlign: "center" }}>
             <h2>Merci de votre confiance.</h2>
           </div>
           <div style={{ textAlign: "center" }}>
