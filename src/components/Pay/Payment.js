@@ -10,6 +10,7 @@ const CURRENCY = "CAD";
 
 const Facture = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -61,41 +62,39 @@ class Payment extends Component {
     if (!this.state.paymentIsDone) {
       return (
         <Facture>
-          <Jumbotron style={{ padding: 30, maxWidth: "50%" }}>
-            <h1>Facture pour honoraires d'avocats</h1>
-            <p>
-              Afin de poursuivre les discussions avec Maître Marc-Antione Harvey
-              sur l'application Photo Ticket, veuillez règler la facture
-              suivante.
-            </p>
-            <p>
-              <StripeCheckout
-                name={"Facture pour honoraires"}
-                description={"Maître Marc-Antoine Harvey"}
-                amount={this.fromCanToCent(this.state.amount)}
-                token={this.onToken(
-                  this.state.amount,
-                  "Maître Marc-Antoine Harvey"
-                )}
-                currency={CURRENCY}
-                stripeKey={STRIPE_PUBLISHABLE}
-                closed={this.onClosed}
-              />
-            </p>
-          </Jumbotron>
+          <div>
+            <h2>Photo Ticket</h2>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <h5>
+              Règler la facture pour poursuivre votre conversation avec Maître
+              Harvey.
+            </h5>
+          </div>
+
+          <StripeCheckout
+            name={"Facture Photo Ticket"}
+            description={"Maître Marc-Antoine Harvey"}
+            amount={this.fromCanToCent(this.state.amount)}
+            token={this.onToken(
+              this.state.amount,
+              "Maître Marc-Antoine Harvey"
+            )}
+            currency={CURRENCY}
+            stripeKey={STRIPE_PUBLISHABLE}
+            closed={this.onClosed}
+          />
         </Facture>
       );
     } else if (this.state.paymentIsDone) {
       return (
         <Facture>
-          <Jumbotron style={{ padding: 30, maxWidth: "50%" }}>
-            <h1>Merci de votre confiance.</h1>
-            <p>
-              Maître Marc-Antione Harvey vous contactera dans les plus brefs
-              délais.
-            </p>
-            <p>Vous pouvez fermez cette page.</p>
-          </Jumbotron>
+          <div>
+            <h2>Merci de votre confiance.</h2>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <h5>Vous pouvez fermer cette page en toute sécurité.</h5>
+          </div>
         </Facture>
       );
     }
