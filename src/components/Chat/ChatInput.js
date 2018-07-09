@@ -28,7 +28,7 @@ const Messages = props => {
     const id = getUserId();
     console.log(id);
     try {
-      await axios.post("http://192.168.2.11:5000/send-sms", { id: id });
+      await axios.post("/api/send-sms", { id: id });
     } catch (error) {
       console.log(error);
     }

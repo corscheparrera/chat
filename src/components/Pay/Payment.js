@@ -103,9 +103,10 @@ class Payment extends Component {
     }
   };
   fromCanToCent = amount => amount * 100;
+
   onToken = (amount, description) => token =>
     axios
-      .post(PAYMENT_SERVER_URL, {
+      .post("/api/charge", {
         description,
         source: token.id,
         currency: CURRENCY,
