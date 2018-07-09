@@ -32,10 +32,10 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <PrivateRoute
+          <Route
             path="/chat"
             component={Main}
-            authenticated={this.state.authenticated}
+            // authenticated={this.state.authenticated}
           />
 
           <Route path="/charge" component={Payment} />
