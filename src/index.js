@@ -33,7 +33,7 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
           <Route
-            path="/chat"
+            path="/chat/rACgvtw3QI/"
             component={Main}
             // authenticated={this.state.authenticated}
           />
