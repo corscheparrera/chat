@@ -1,6 +1,5 @@
 import { Col, Grid, Row } from "react-bootstrap";
 import React, { Component } from "react";
-
 import Chat from "./Chat.js";
 import SripeIcon from "react-icons/lib/fa/cc-stripe";
 import fire from "./Firebase.js";
@@ -59,7 +58,7 @@ class Main extends Component {
 
   getChatPath = () => {
     const url = window.location.href;
-    const id = url.replace("http://167.99.189.31/chat/rACgvtw3QI/", "");
+    const id = url.split("ID=").pop();
 
     this.setState(
       {
@@ -113,7 +112,7 @@ class Main extends Component {
   };
 
   selectConvo = newID => {
-    this.props.history.push(`/chat/rACgvtw3QI/${newID}`);
+    this.props.history.push(`/chat/rACgvtw3QI/ID=${newID}`);
     this.getChatPath();
   };
 
