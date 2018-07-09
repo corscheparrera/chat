@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import { Button, FormGroup, InputGroup, FormControl } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import fire from "./Firebase.js";
 import firebase from "firebase";
 

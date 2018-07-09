@@ -1,7 +1,6 @@
 import { Col, Grid, Row } from "react-bootstrap";
 import React, { Component } from "react";
 import Chat from "./Chat.js";
-import SripeIcon from "react-icons/lib/fa/cc-stripe";
 import fire from "./Firebase.js";
 import styled from "styled-components";
 
@@ -138,7 +137,6 @@ class Main extends Component {
         <UserRow>
           <Bold>{"Email: "}</Bold>
           <h5>{data.email}</h5>
-          <SripeIcon size={40} style={{ paddingLeft: 10 }} />
         </UserRow>
       </UserDiv>
     );
