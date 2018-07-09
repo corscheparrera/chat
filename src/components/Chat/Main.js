@@ -59,7 +59,8 @@ class Main extends Component {
 
   getChatPath = () => {
     const url = window.location.href;
-    const id = url.replace("167.99.189.31/chat/", "");
+    const id = url.replace("http://167.99.189.31/chat/", "");
+
     this.setState(
       {
         userPath: `allUsers/${id}`,
