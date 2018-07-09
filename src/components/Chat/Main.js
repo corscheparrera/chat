@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Chat from "./Chat.js";
 import fire from "./Firebase.js";
 import styled from "styled-components";
+import Spinner from "./Spinner";
 
 const database = fire.database();
 
@@ -35,6 +36,13 @@ const UserDiv = styled.div`
   `};
 `;
 
+const SpinArea = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 50px;
+`;
 const UserRow = styled.div`
   align-items: center;
   display: flex;
@@ -74,6 +82,7 @@ class Main extends Component {
   };
 
   getUsers = async () => {
+    this.toggleLoading();
     let arrayOfUsers = [];
     const eventRef = database.ref("allUsers");
     const snapshot = await eventRef.once("value");
@@ -83,9 +92,16 @@ class Main extends Component {
       arrayOfUsers.push(users[key]);
     }
 
-    this.setState({ users: arrayOfUsers }, () => this.startChat());
+    this.setState({ users: arrayOfUsers, loading: false }, () =>
+      this.startChat()
+    );
   };
 
+  toggleLoading = () => {
+    if (this.state.loading) {
+      this.setState({ loading: false });
+    } else this.setState({ loading: true });
+  };
   startChat = async () => {
     try {
       await database.goOnline();
@@ -120,6 +136,16 @@ class Main extends Component {
       return "active";
     }
   };
+
+  displayUsers = () => {
+    if (this.state.loading) {
+      return (
+        <SpinArea>
+          <Spinner />
+        </SpinArea>
+      );
+    } else return this.state.users.map(this.renderUsers);
+  };
   renderUsers = (data, i) => {
     return (
       <UserDiv
@@ -148,7 +174,7 @@ class Main extends Component {
           <Col sm={4}>
             <UserList>
               <h3>Utilisateurs</h3>
-              {this.state.users.map(this.renderUsers)}
+              {this.displayUsers()}
             </UserList>
           </Col>
           <Col sm={8}>
