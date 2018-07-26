@@ -32,7 +32,7 @@ class Payment extends Component {
 
   getChargeInfos = () => {
     const url = window.location.href;
-    let string = url.replace("http://192.168.2.11:3000/charge/", "");
+    let string = url.replace("https://photo-ticket.ca/charge/", "");
     let chargeInfos = { userId: "", amount: "" };
     string.split("/").forEach((data, i) => {
       if (i === 0) {
