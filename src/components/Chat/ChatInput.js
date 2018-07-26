@@ -49,7 +49,7 @@ const Messages = props => {
     const id = getUserId();
     let messagesRef = database.ref(`${props.path}`);
     await messagesRef.push({
-      text: `http://167.99.189.31/charge/${id}/${this.chargeInput.value}/`,
+      text: `https://photo-ticket.ca/charge/${id}/${this.chargeInput.value}/`,
       user: props.user,
       createdAt: firebase.database.ServerValue.TIMESTAMP
     });
