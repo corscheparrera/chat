@@ -12,9 +12,7 @@ export const FeaturesComponent = props => {
       <div className="container">
         <div className="section-heading text-center">
           <h2>{polylgot.t("complete")}</h2>
-          <p className="text-muted">
-            Check out what you can do with this app theme!
-          </p>
+
           <hr />
         </div>
         <div className="row">

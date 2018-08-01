@@ -29,7 +29,13 @@ section.contact ul.list-social li.social-twitter a:hover {
 section.contact ul.list-social li.social-facebook a {
   background-color: #3b5998;
 }
+section.contact ul.list-social li.social-instagram a {
+  background-color: #e4405f;
+}
 section.contact ul.list-social li.social-facebook a:hover {
+  background-color: #344e86;
+}
+section.contact ul.list-social li.social-instagram a:hover {
   background-color: #344e86;
 }
 section.contact ul.list-social li.social-google-plus a {

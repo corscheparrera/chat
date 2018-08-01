@@ -12,9 +12,9 @@ const navbar = {
 const landing = {
   description: {
     en:
-      "Photo Ticket is a mobile app that scans your road tickets and tells you everything there is to kow about the law regarding any given infraction.",
+      "Photo Ticket is a mobile app allowing you to fight a ticket for free and instantly!",
     fr:
-      "Vous songez à contester une contravention ? Photo-Ticket peut vous aider gratuitement et instantanément!"
+      "Photo Ticket est une application mobile permettant de contester un ticket gratuitement et instantanément!"
   },
   start: {
     en: "START NOW FOR FREE!",
@@ -83,18 +83,36 @@ const featuresComponent = {
 };
 
 const callToAction = {
-  stopWaiting: {
-    en: "Stop waiting.",
-    fr: "N'attendez plus."
+  fight: {
+    en: "Fight",
+    fr: "Contester"
+  },
+  tickets: {
+    en: "your ticket!",
+    fr: "votre ticket!"
   }
 };
-
+const footer = {
+  rightsReserved: {
+    en: "2018 Photo Ticket Inc. All Rights Reserved.",
+    fr: "2018 Photo Ticket Inc. Tous droits réservés."
+  },
+  privacy: {
+    en: "Privacy",
+    fr: "Confidentialité"
+  },
+  terms: {
+    en: "Terms",
+    fr: "Termes"
+  }
+};
 const translations = {
   ...navbar,
   ...landing,
   ...downloadComponent,
   ...featuresComponent,
-  ...callToAction
+  ...callToAction,
+  ...footer
 };
 
 function getUserLanguage() {

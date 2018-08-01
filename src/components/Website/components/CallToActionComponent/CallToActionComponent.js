@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
+import polyglot from "../../Translator";
 
 export const CallToActionComponent = props => {
   return (
@@ -7,13 +8,15 @@ export const CallToActionComponent = props => {
       <div className="cta-content">
         <div className="container">
           <h2>
-            Stop waiting.<br />Know your rights.
+            {polyglot.t("fight")}
+            <br />
+            {polyglot.t("tickets")}
           </h2>
           <a
             href="#contact"
             className="btn btn-outline btn-xl js-scroll-trigger"
           >
-            Let's Get Started!
+            {polyglot.t("start")}
           </a>
         </div>
       </div>

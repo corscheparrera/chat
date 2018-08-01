@@ -6,7 +6,7 @@ import polyglot from "../../Translator";
 
 export const AppDownloadComponent = props => {
   return (
-    <section className="download bg-primary text-center" id="download">
+    <section className="download  text-center" id="download">
       <div className="container">
         <div className="row">
           <div className="col-md-8 mx-auto">

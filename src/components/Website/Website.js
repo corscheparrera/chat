@@ -46,8 +46,8 @@ class Website extends Component {
         <HeroComponent />
         <AppDownloadComponent />
         <FeaturesComponent />
-        <CallToActionComponent />
         <SocialComponent />
+        <CallToActionComponent />
         <FooterComponent />
       </div>
     );
