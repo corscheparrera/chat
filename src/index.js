@@ -5,6 +5,7 @@ import fire from "./components/Chat/Firebase";
 import Main from "./components/Chat/Main";
 import Login from "./components/Chat/Login";
 import Payment from "./components/Pay/Payment";
+import Website from "./components/Website/Website";
 import PrivateRoute from "./components/Chat/PrivateRoute";
 import ReactDOM from "react-dom";
 import registerServiceWorker from "./registerServiceWorker";
@@ -38,6 +39,7 @@ export default class App extends Component {
             // authenticated={this.state.authenticated}
           />
 
+          <Route path="/" component={Website} />
           <Route path="/charge" component={Payment} />
           <Route exact path="/login" component={Login} />
         </div>
