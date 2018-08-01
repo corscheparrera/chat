@@ -3,11 +3,10 @@ import "./style.css";
 import * as Scroll from "react-scroll";
 import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
 import polyglot from "../../Translator";
-
 class NavBarComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = { mnuShow: false, lang: polyglot.locale };
+    this.state = { mnuShow: false };
     this.closeMnu = this.closeMnu.bind(this);
   }
 
@@ -27,10 +26,6 @@ class NavBarComponent extends Component {
     Events.scrollEvent.remove("begin");
     Events.scrollEvent.remove("end");
   }
-  switchLang = () => {
-    polyglot.switchLanguage();
-    this.setState({ lang: polyglot.locale });
-  };
 
   toggleShow() {
     this.setState({ mnuShow: !this.state.mnuShow });
@@ -125,7 +120,7 @@ class NavBarComponent extends Component {
                   smooth="easeInOutQuart"
                   duration={1000}
                   onClick={() => {
-                    this.switchLang();
+                    this.props.switchLang();
                   }}
                 >
                   <i

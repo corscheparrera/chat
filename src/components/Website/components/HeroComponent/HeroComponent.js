@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./style.css";
 import "../../device-mockups/device-mockups.css";
-import demoScreen1 from "../../demo-screen-1.jpg";
+import demoScreen1 from "../../IMG_1239.PNG";
+import polyglot from "../../Translator";
 
 export const HeroComponent = props => {
   return (
@@ -10,15 +11,12 @@ export const HeroComponent = props => {
         <div className="row h-100">
           <div className="col-lg-7 my-auto">
             <div className="header-content mx-auto">
-              <h1 className="mb-5">
-                New Age is an app landing page that will help you beautifully
-                showcase your new mobile app, or anything else!
-              </h1>
+              <h1 className="mb-5">{polyglot.t("description")}</h1>
               <a
                 href="#download"
                 className="btn btn-outline btn-xl js-scroll-trigger"
               >
-                Start Now for Free!
+                {polyglot.t("start")}
               </a>
             </div>
           </div>
