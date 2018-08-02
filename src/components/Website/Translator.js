@@ -17,8 +17,8 @@ const landing = {
       "Photo Ticket est une application mobile permettant de contester un ticket gratuitement et instantanément!"
   },
   start: {
-    en: "START NOW FOR FREE!",
-    fr: "DÉBUTER MAINTENANT GRATUITEMENT!"
+    en: "START NOW !",
+    fr: "DÉBUTER !"
   }
 };
 const downloadComponent = {
