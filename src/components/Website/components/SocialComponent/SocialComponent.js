@@ -3,7 +3,7 @@ import "./style.css";
 import polyglot from "../../Translator";
 export const SocialComponent = props => {
   return (
-    <section className="contact " id="contact">
+    <section className="contact ">
       <div className="container">
         <ul className="list-inline list-social">
           <li className="list-inline-item social-twitter">

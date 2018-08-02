@@ -12,6 +12,7 @@ export const CallToActionComponent = props => {
             <br />
             {polyglot.t("tickets")}
           </h2>
+          <div id="contact" />
           <a
             href="#contact"
             className="btn btn-outline btn-xl js-scroll-trigger"
@@ -20,6 +21,7 @@ export const CallToActionComponent = props => {
           </a>
         </div>
       </div>
+
       <div className="overlay" />
     </section>
   );
