@@ -6,9 +6,9 @@ import Main from "./components/Chat/Main";
 import Login from "./components/Chat/Login";
 import Payment from "./components/Pay/Payment";
 import Website from "./components/Website/Website";
-import PrivateRoute from "./components/Chat/PrivateRoute";
+// import PrivateRoute from "./components/Chat/PrivateRoute";
 import ReactDOM from "react-dom";
-import registerServiceWorker from "./registerServiceWorker";
+// import registerServiceWorker from "./registerServiceWorker";
 
 export default class App extends Component {
   state = { loading: true, authenticated: false, user: null };

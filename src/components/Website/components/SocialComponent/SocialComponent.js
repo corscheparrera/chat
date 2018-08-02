@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
-import polyglot from "../../Translator";
+
 export const SocialComponent = props => {
   return (
     <section className="contact ">

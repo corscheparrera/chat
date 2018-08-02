@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 import googlePlayBadge from "./img/google-play-badge.svg";
 import appStoreBadge from "./img/app-store-badge.svg";

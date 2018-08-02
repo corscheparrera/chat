@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 import "../../device-mockups/device-mockups.css";
 import demoScreen1 from "../../IMG_1239.PNG";

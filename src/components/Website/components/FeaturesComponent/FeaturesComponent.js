@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 import "simple-line-icons/css/simple-line-icons.css";
 import demoScreen1 from "../../IMG_1243.PNG";
