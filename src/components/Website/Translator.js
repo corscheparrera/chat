@@ -12,9 +12,9 @@ const navbar = {
 const landing = {
   description: {
     en:
-      "Photo Ticket is a mobile app allowing you to fight a ticket for free and instantly!",
+      "Photo Ticket is a mobile app allowing you to analyse a ticket for free and instantly!",
     fr:
-      "Photo Ticket est une application mobile permettant de contester un ticket gratuitement et instantanément!"
+      "Photo Ticket est une application mobile permettant d'analyser votre contavention gratuitement et instantanément!"
   },
   start: {
     en: "START NOW !",
@@ -50,7 +50,7 @@ const featuresComponent = {
     en:
       "Scan a ticket with your mobile device to instantly know all there is to know about your infraction.",
     fr:
-      "Scannez un ticket avec votre appareil mobile pour savoir instantanément tout ce qu'il y a à savoir sur votre infraction."
+      "Scannez une contravention avec votre appareil mobile pour savoir instantanément tout ce qu'il y a à savoir sur votre infraction."
   },
   chat: {
     en: "Chat",
@@ -59,7 +59,7 @@ const featuresComponent = {
   messagingPar: {
     en: "Chat with a lawyer to have assistance in your defense.",
     fr:
-      "Clavardez avec un avocat afin d'avoir de l'assistance pour contester votre ticket."
+      "Clavardez avec un avocat afin d'avoir de l'assistance pour contester votre contravention."
   },
   databse: {
     en: "Complete database",
@@ -67,9 +67,9 @@ const featuresComponent = {
   },
   databsePar: {
     en:
-      "Access a complete directory of road offenses in Monréal (constituent elements of the offense, possible defenses, etc.).",
+      "Access a complete directory of road offenses in Montréal (constituent elements of the offense, possible defenses, etc.).",
     fr:
-      "Accèder à un repertoire complet des infractions de la route à Monréal (éléments constitutifs de l'infraction, moyens de défense possible, etc)."
+      "Accèder à un repertoire complet des infractions de la route à Monréal (éléments constitutifs de l'infraction, exceptions prévues par la loi, etc)."
   },
   save: {
     en: "Save",
@@ -78,7 +78,7 @@ const featuresComponent = {
   savePar: {
     en: "Save demerits points, legal fees, insurance costs. Keep your license.",
     fr:
-      "Épargnez des points, des frais légaux, les frais d'assurance. Conserver votre permis."
+      "Épargnez des points d'inaptitude, des frais légaux, les frais d'assurance. Conserver votre permis."
   }
 };
 
@@ -89,7 +89,7 @@ const callToAction = {
   },
   tickets: {
     en: "your ticket!",
-    fr: "votre ticket!"
+    fr: "votre contravention!"
   }
 };
 const footer = {
