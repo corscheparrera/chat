@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-
+import { BrowserRouter, Route } from "react-router-dom";
 import "./webStyle.css";
 import polyglot from "./Translator";
 import "font-awesome/css/font-awesome.css";
@@ -11,6 +11,7 @@ import { FeaturesComponent } from "./components/FeaturesComponent/FeaturesCompon
 import { AppDownloadComponent } from "./components/AppDownloadComponent/AppDownloadComponent";
 import { HeroComponent } from "./components/HeroComponent/HeroComponent";
 import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
+import Privacy from "./components/PrivacyComponent/PrivacyComponent";
 
 class Website extends Component {
   constructor(props) {
@@ -37,18 +38,41 @@ class Website extends Component {
     const nbs = window.pageYOffset > 100 ? "navbar-shrink" : "";
     this.setState({ navBarShrink: nbs });
   }
+  urlPrivacyPolicy = () => {
+    this.props.history.push("/privacy");
+  };
+  urlBackToMain = () => {
+    this.props.history.push("/");
+  };
 
   render() {
     const nbs = this.state ? this.state.navBarShrink : "";
     return (
       <div>
-        <NavBarComponent navBarShrink={nbs} switchLang={this.switchLang} />
-        <HeroComponent />
-        <AppDownloadComponent />
-        <FeaturesComponent />
-        <CallToActionComponent />
-        <SocialComponent />
-        <FooterComponent />
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <div>
+              <NavBarComponent
+                navBarShrink={nbs}
+                switchLang={this.switchLang}
+              />
+              <HeroComponent />
+              <AppDownloadComponent />
+              <FeaturesComponent />
+              <CallToActionComponent />
+              <SocialComponent />
+              <FooterComponent urlPrivacyPolicy={this.urlPrivacyPolicy} />
+            </div>
+          )}
+        />
+
+        <Route
+          exact
+          path="/privacy"
+          render={() => <Privacy urlBackToMain={this.urlBackToMain} />}
+        />
       </div>
     );
   }

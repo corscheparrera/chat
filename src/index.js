@@ -6,6 +6,7 @@ import Main from "./components/Chat/Main";
 import Login from "./components/Chat/Login";
 import Payment from "./components/Pay/Payment";
 import Website from "./components/Website/Website";
+import Privacy from "./components/Website/components/PrivacyComponent/PrivacyComponent";
 // import PrivateRoute from "./components/Chat/PrivateRoute";
 import ReactDOM from "react-dom";
 // import registerServiceWorker from "./registerServiceWorker";
@@ -38,10 +39,10 @@ export default class App extends Component {
             component={Main}
             // authenticated={this.state.authenticated}
           />
-
           <Route path="/" component={Website} />
+          {/* <Route exact path="/privacy" component={Privacy} /> */}
           <Route path="/charge" component={Payment} />
-          <Route exact path="/login" component={Login} />
+          {/* <Route exact path="/login" component={Login} /> */}
         </div>
       </BrowserRouter>
     );

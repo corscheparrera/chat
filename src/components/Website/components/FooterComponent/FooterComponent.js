@@ -9,7 +9,9 @@ export const FooterComponent = props => {
         <p>&copy; {polyglot.t("rightsReserved")}</p>
         <ul className="list-inline">
           <li className="list-inline-item">
-            <a href="#">{polyglot.t("privacy")}</a>
+            <a href="#" onClick={() => props.urlPrivacyPolicy()}>
+              {polyglot.t("privacy")}{" "}
+            </a>
           </li>
           <li className="list-inline-item">
             <a href="#">{polyglot.t("terms")}</a>
