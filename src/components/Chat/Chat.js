@@ -9,11 +9,24 @@ const avocat = {
   email: "Maître Harvey"
 };
 
-const Scrollable = styled.div`
-  overflow: auto;
-  padding: 10px;
+const Outer = styled.div`
+  -moz-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+  border: 1px solid #aaaaaa;
+  width: 100%;
   height: 60vh;
+  /* margin: 5em auto 0; */
   margin-bottom: 20px;
+  overflow-y: scroll;
+`;
+const Inner = styled.div`
+  -moz-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+  width: 100%;
+  text-align: center;
+  padding: 2em;
 `;
 const TitleChat = styled.h1`
   text-align: center;
@@ -24,37 +37,22 @@ const Cient = styled.h4`
 `;
 
 export default class Chat extends Component {
-  componentDidMount() {
-    this.refs.scrollDiv.addEventListener("wheel", evt => {
-      const { scrollDiv } = this.refs;
-      // console.log(root);
-      // Note: for perf, clientHeight & scrollHeight could be cached and updated on resize
-      if (
-        (scrollDiv.scrollTop ===
-          scrollDiv.scrollHeight - scrollDiv.clientHeight &&
-          evt.deltaY > 0) ||
-        (scrollDiv.scrollTop === 0 && evt.deltaY < 0)
-      ) {
-        evt.preventDefault();
-      }
-    });
-  }
   render() {
     return (
       <Grid>
         <Row>
-          <Col sm={8}>
+          <Col sm={12}>
             <TitleChat>Chat Room</TitleChat>
             <Cient>Client: {this.props.email}</Cient>
-            <Scrollable>
-              <div ref="scrollDiv">
+            <Outer>
+              <Inner>
                 <Messages chat={this.props.chat} />
-              </div>
-            </Scrollable>
+              </Inner>
+            </Outer>
           </Col>
         </Row>
         <Row>
-          <Col sm={4} smOffset={2}>
+          <Col sm={12}>
             <ChatInput user={avocat} path={this.props.chatPath} />
           </Col>
         </Row>

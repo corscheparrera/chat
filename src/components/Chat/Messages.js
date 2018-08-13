@@ -33,7 +33,7 @@ function renderMessanges(data, i) {
       <div>
         {data.user.email}: {data.text}
       </div>
-      <div>
+      <div style={{ fontSize: 10 }}>
         <Moment fromNow>{data.createdAt}</Moment>
         {" / "}
         <Moment format="YYYY/MM/DD">{data.createdAt}</Moment>
