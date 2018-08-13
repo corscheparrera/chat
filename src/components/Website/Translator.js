@@ -11,10 +11,9 @@ const navbar = {
 
 const landing = {
   description: {
-    en:
-      "Photo Ticket is a mobile app allowing you to analyse a ticket for free and instantly!",
+    en: "Get legal advice for free and instantly with a simple photo.",
     fr:
-      "Photo Ticket est une application mobile permettant d'analyser votre contavention gratuitement et instantanément!"
+      "Obtenez des conseils légaux gratuitement et instantanément avec une simple photo."
   },
   start: {
     en: "START NOW !",
@@ -24,7 +23,7 @@ const landing = {
 const downloadComponent = {
   rights: {
     en: "Be aware of your rights today.",
-    fr: "Prémunissez vous contre les injustices."
+    fr: "Prémunissez-vous contre les injustices."
   },
   available: {
     en:
@@ -69,7 +68,7 @@ const featuresComponent = {
     en:
       "Access a complete directory of road offenses in Montréal (constituent elements of the offense, possible defenses, etc.).",
     fr:
-      "Accèder à un repertoire complet des infractions de la route à Monréal (éléments constitutifs de l'infraction, exceptions prévues par la loi, etc)."
+      "Accèder à un repertoire complet des infractions de la route à Montréal (éléments constitutifs de l'infraction, exceptions prévues par la loi, etc)."
   },
   save: {
     en: "Save",
@@ -85,7 +84,7 @@ const featuresComponent = {
 const callToAction = {
   fight: {
     en: "Fight",
-    fr: "Contester"
+    fr: "Contestez"
   },
   tickets: {
     en: "your ticket!",
