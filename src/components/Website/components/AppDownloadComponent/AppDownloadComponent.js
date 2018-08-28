@@ -13,12 +13,15 @@ export const AppDownloadComponent = props => {
             <h2 className="section-heading">{polyglot.t("rights")}</h2>
             <p>{polyglot.t("available")}</p>
             <div className="badges">
-              <a className="badge-link" href="#">
+              <a
+                className="badge-link"
+                href="https://play.google.com/store/apps/details?id=com.ticketphoto.ticketphoto"
+              >
                 <img src={googlePlayBadge} alt="" />
               </a>
-              <a className="badge-link" href="#">
+              {/* <a className="badge-link" href="#">
                 <img src={appStoreBadge} alt="" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

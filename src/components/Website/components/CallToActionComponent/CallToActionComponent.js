@@ -14,7 +14,7 @@ export const CallToActionComponent = props => {
           </h2>
           <div id="contact" />
           <a
-            href="#contact"
+            href="https://play.google.com/store/apps/details?id=com.ticketphoto.ticketphoto"
             className="btn btn-outline btn-xl js-scroll-trigger"
           >
             {polyglot.t("start")}

@@ -56,7 +56,7 @@ class NavBarComponent extends Component {
             className="navbar-brand js-scroll-trigger"
             href="#page-top"
           >
-            Photo Ticket App
+            Photo-Ticket App
           </a>
           <button
             onClick={this.toggleShow.bind(this)}
