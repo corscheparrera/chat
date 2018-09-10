@@ -171,13 +171,13 @@ class Main extends Component {
     return (
       <Grid>
         <Row>
-          <Col sm={4}>
+          <Col sm={5}>
             <UserList>
               <h3>Utilisateurs</h3>
               {this.displayUsers()}
             </UserList>
           </Col>
-          <Col sm={8}>
+          <Col sm={7}>
             <Chat
               chatPath={this.state.chatPath}
               userPath={this.state.userPath}
