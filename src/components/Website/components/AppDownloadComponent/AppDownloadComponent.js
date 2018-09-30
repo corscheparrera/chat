@@ -19,9 +19,12 @@ export const AppDownloadComponent = props => {
               >
                 <img src={googlePlayBadge} alt="" />
               </a>
-              {/* <a className="badge-link" href="#">
+              <a
+                className="badge-link"
+                href="https://itunes.apple.com/us/app/photo-ticket/id1433953440?l=fr&ls=1&mt=8"
+              >
                 <img src={appStoreBadge} alt="" />
-              </a> */}
+              </a>
             </div>
           </div>
         </div>
