@@ -80,7 +80,6 @@ const featuresComponent = {
       "Épargnez des points d'inaptitude, des frais légaux, les frais d'assurance. Conserver votre permis."
   }
 };
-
 const callToAction = {
   fight: {
     en: "Fight",
@@ -105,13 +104,24 @@ const footer = {
     fr: "Termes"
   }
 };
+const law = {
+  landingMessage1: {
+    en: "Save your demerit points.",
+    fr: "Sauvez vos points d'inaptitude."
+  },
+  landingMessage2: {
+    en: "Reduce the price of your fines.",
+    fr: "Réduisez le montant de vos amendes."
+  }
+};
 const translations = {
   ...navbar,
   ...landing,
   ...downloadComponent,
   ...featuresComponent,
   ...callToAction,
-  ...footer
+  ...footer,
+  ...law
 };
 
 function getUserLanguage() {

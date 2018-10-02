@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import "./style.css";
+
 import * as Scroll from "react-scroll";
 import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
 import polyglot from "../../Translator";
-
 class NavBarComponent extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +48,7 @@ class NavBarComponent extends Component {
         className={`navbar navbar-expand-lg navbar-light fixed-top ${
           this.props.navBarShrink
         }`}
-        id="mainNav"
+        id="lawMainNav"
       >
         <div className="container">
           <a
@@ -57,7 +56,7 @@ class NavBarComponent extends Component {
             className="navbar-brand js-scroll-trigger"
             href="#page-top"
           >
-            Photo-Ticket App
+            Maître Harvey, Avocat.
           </a>
           <button
             onClick={this.toggleShow.bind(this)}
@@ -86,7 +85,7 @@ class NavBarComponent extends Component {
                   smooth="easeInOutQuart"
                   duration={1000}
                 >
-                  {polyglot.t("download")}
+                  {"Expertises"}
                 </Link>
               </li>
               <li className="nav-item">
@@ -98,20 +97,20 @@ class NavBarComponent extends Component {
                   smooth="easeInOutQuart"
                   duration={1000}
                 >
-                  {polyglot.t("features")}
+                  {"Contact"}
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
+                <a
                   activeClass="active"
                   className="nav-link js-scroll-trigger"
-                  to="contact"
+                  href="/app"
                   spy={true}
                   smooth="easeInOutQuart"
                   duration={1000}
                 >
-                  Contact
-                </Link>
+                  App
+                </a>
               </li>
               <li className="nav-item">
                 <Link

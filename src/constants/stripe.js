@@ -4,3 +4,4 @@ const STRIPE_PUBLISHABLE =
     : "pk_test_TSSWOwzYJyk7iWpS0CkoaJAg";
 
 export default STRIPE_PUBLISHABLE;
+

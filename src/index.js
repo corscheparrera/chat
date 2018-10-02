@@ -40,6 +40,7 @@ export default class App extends Component {
             // authenticated={this.state.authenticated}
           />
           <Route exact path="/" component={Website} />
+          <Route exact path="/app" component={Website} />
           <Route exact path="/privacy" component={Website} />
           <Route path="/charge" component={Payment} />
           {/* <Route exact path="/login" component={Login} /> */}

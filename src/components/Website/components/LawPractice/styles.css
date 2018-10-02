@@ -1,0 +1,173 @@
+#lawMainNav {
+  border-color: rgba(34, 34, 34, 0.05);
+  background-color: white;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  font-family: "Catamaran", "Helvetica", "Arial", "sans-serif";
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+#lawMainNav .navbar-brand {
+  color: white;
+  font-family: "Catamaran", "Helvetica", "Arial", "sans-serif";
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+#lawMainNav .navbar-brand:hover,
+#lawMainNav .navbar-brand:focus {
+  color: white;
+}
+#lawMainNav .navbar-toggler {
+  font-size: 12px;
+  padding: 8px 10px;
+  color: #222222;
+}
+#lawMainNav .navbar-nav > li > a {
+  font-size: 11px;
+  font-family: "Lato", "Helvetica", "Arial", "sans-serif";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#lawMainNav .navbar-nav > li > a.active {
+  color: #fdcc52 !important;
+  background-color: transparent;
+}
+#lawMainNav .navbar-nav > li > a.active:hover {
+  background-color: transparent;
+}
+#lawMainNav .navbar-nav > li > a,
+#lawMainNav .navbar-nav > li > a:focus {
+  color: #222222;
+}
+#lawMainNav .navbar-nav > li > a:hover,
+#lawMainNav .navbar-nav > li > a:focus:hover {
+  color: white;
+}
+@media (min-width: 992px) {
+  #lawMainNav {
+    border-color: transparent;
+    background-color: transparent;
+  }
+  #lawMainNav .navbar-brand {
+    color: fade(white, 70%);
+  }
+  #lawMainNav .navbar-brand:hover,
+  #lawMainNav .navbar-brand:focus {
+    color: white;
+  }
+  #lawMainNav .navbar-nav > li > a,
+  #lawMainNav .navbar-nav > li > a:focus {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  #lawMainNav .navbar-nav > li > a:hover,
+  #lawMainNav .navbar-nav > li > a:focus:hover {
+    font-size: 12px;
+  }
+  #lawMainNav.navbar-shrink {
+    border-color: rgba(34, 34, 34, 0.1);
+    background-color: white;
+  }
+  #lawMainNav.navbar-shrink .navbar-brand {
+    color: #222222;
+  }
+  #lawMainNav.navbar-shrink .navbar-brand:hover,
+  #lawMainNav.navbar-shrink .navbar-brand:focus {
+    color: white;
+  }
+  #lawMainNav.navbar-shrink .navbar-nav > li > a,
+  #lawMainNav.navbar-shrink .navbar-nav > li > a:focus {
+    color: #222222;
+  }
+  #lawMainNav.navbar-shrink .navbar-nav > li > a:hover,
+  #lawMainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
+    font-size: 12px;
+  }
+}
+
+header.mastheadLaw {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: white;
+  background: url("./img/traffic.jpg");
+  background-size: cover;
+}
+header.mastheadLaw .header-content {
+  max-width: 500px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+header.mastheadLaw .header-content h1 {
+  font-size: 30px;
+}
+header.mastheadLaw .device-container {
+  max-width: 325px;
+  margin-right: auto;
+  margin-left: auto;
+}
+header.mastheadLaw .device-container .screen img {
+  border-radius: 3px;
+}
+@media (min-width: 992px) {
+  header.mastheadLaw {
+    height: 100vh;
+    min-height: 775px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  header.mastheadLaw .header-content {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  header.mastheadLaw .header-content h1 {
+    font-size: 50px;
+  }
+  header.mastheadLaw .device-container {
+    max-width: 325px;
+  }
+}
+section.features .section-heading {
+  margin-bottom: 100px;
+}
+section.features .section-heading h2 {
+  margin-top: 0;
+}
+section.features .section-heading p {
+  margin-bottom: 0;
+}
+
+section.features .device-container,
+section.features .feature-item {
+  max-width: 325px;
+  margin: 0 auto;
+}
+
+section.features .device-container {
+  margin-bottom: 100px;
+}
+@media (min-width: 992px) {
+  section.features .device-container {
+    margin-bottom: 0;
+  }
+}
+
+section.features .feature-item {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+section.features .feature-item h3 {
+  font-size: 30px;
+}
+section.features .feature-item i {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 15px;
+  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: linear-gradient(to left, #7b4397, #dc2430);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

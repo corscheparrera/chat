@@ -10,6 +10,7 @@ import { CallToActionComponent } from "./components/CallToActionComponent/CallTo
 import { FeaturesComponent } from "./components/FeaturesComponent/FeaturesComponent";
 import { AppDownloadComponent } from "./components/AppDownloadComponent/AppDownloadComponent";
 import { HeroComponent } from "./components/HeroComponent/HeroComponent";
+import MainLawPractice from "./components/LawPractice/MainLawPractice";
 import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
 import Privacy from "./components/PrivacyComponent/PrivacyComponent";
 
@@ -52,6 +53,16 @@ class Website extends Component {
         <Route
           exact
           path="/"
+          render={() => (
+            <div>
+              <MainLawPractice />
+            </div>
+          )}
+        />
+        <Route
+          exact
+          // app#page-top
+          path="/app"
           render={() => (
             <div>
               <NavBarComponent
