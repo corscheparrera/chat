@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 import mapMarker from "./img/mapmarker.svg";
 import { Controller } from "./Controller";
-// import "./App.css";
+import sizeMe from "react-sizeme";
 
 const MAPBOX_ACCESS_TOKEN =
   "pk.eyJ1IjoibWF4NDMiLCJhIjoiY2ptcXJycGo4MXQ0djN2cDUwYTUwcnN1eiJ9.dyz_ArSvxmcNQ4NL0HPHWQ";
 
-class App extends Component {
+class Carte extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,7 +25,11 @@ class App extends Component {
 
   render() {
     const { latitude, longitude, zoom, showLocations } = this.state;
-    const { innerWidth: width, innerHeight: height } = window;
+
+    const width = this.props.size.width;
+    const height = this.props.size.height;
+    // const height = 300;
+    // const { innerWidth: width, innerHeight: height } = window;
     const viewport = {
       width,
       height,
@@ -37,7 +41,7 @@ class App extends Component {
     };
 
     return (
-      <div>
+      <div style={{ height: "70vh" }}>
         <ReactMapGL
           {...viewport}
           mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
@@ -68,4 +72,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default sizeMe({ monitorHeight: true })(Carte);

@@ -112,7 +112,34 @@ const law = {
   landingMessage2: {
     en: "Reduce the price of your fines.",
     fr: "Réduisez le montant de vos amendes."
-  }
+  },
+
+  nextTo: {
+    en: "Next to the Municipal Court of Montreal at place Versailles",
+    fr: "Voisin de la Cour municipale de Montréal à place Versailles"
+  },
+  service: { en: "Modern legal services", fr: "Services juridiques modernes" },
+  contact: { en: "Contact attorney Harvey", fr: "Contactez Me Harvey" },
+  completeRepertory: {
+    en:
+      "Former Attorney for the City of Montreal, Mr. Harvey has developed expertise in the field of road traffic offenses.",
+    fr:
+      "Ancien procureur de la Couronne pour la Ville de Montréal, Me Harvey a développer une expertise en matière de dossser d'infractions de la route."
+  },
+  available: { en: "Available", fr: "Disponible" },
+  disponibilityPar: {
+    en: "Chat or meet with Me Harvey to have assistance in your defense.",
+    fr:
+      "Clavardez ou rencontrez  Me Harvey afin d'avoir de l'assistance pour contester votre contravention."
+  },
+  mobileApp: { en: "Mobile app", fr: "Application mobile" },
+  mobileAppPar: {
+    en:
+      "Me. Harvey has designed a mobile application to read and interpret a ticket instantly.",
+    fr:
+      "Me. Harvey a conçu une application mobile permettant de lire et interpréter une contravention instantanément."
+  },
+  linkApp: { en: "See App", fr: "Voir l'app" }
 };
 const translations = {
   ...navbar,

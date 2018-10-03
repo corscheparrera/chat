@@ -55,7 +55,7 @@ class Website extends Component {
           path="/"
           render={() => (
             <div>
-              <MainLawPractice />
+              <MainLawPractice switchLang={this.switchLang} />
             </div>
           )}
         />

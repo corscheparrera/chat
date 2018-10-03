@@ -48,7 +48,7 @@
 @media (min-width: 992px) {
   #lawMainNav {
     border-color: transparent;
-    background-color: transparent;
+    background-color: #1d1d1d;
   }
   #lawMainNav .navbar-brand {
     color: fade(white, 70%);
@@ -129,40 +129,40 @@ header.mastheadLaw .device-container .screen img {
     max-width: 325px;
   }
 }
-section.features .section-heading {
+section.services .section-heading {
   margin-bottom: 100px;
 }
-section.features .section-heading h2 {
+section.services .section-heading h2 {
   margin-top: 0;
 }
-section.features .section-heading p {
+section.services .section-heading p {
   margin-bottom: 0;
 }
 
-section.features .device-container,
-section.features .feature-item {
+section.services .device-container,
+section.services .feature-item {
   max-width: 325px;
   margin: 0 auto;
 }
 
-section.features .device-container {
+section.services .device-container {
   margin-bottom: 100px;
 }
 @media (min-width: 992px) {
-  section.features .device-container {
+  section.services .device-container {
     margin-bottom: 0;
   }
 }
 
-section.features .feature-item {
+section.services .feature-item {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
 }
-section.features .feature-item h3 {
+section.services .feature-item h3 {
   font-size: 30px;
 }
-section.features .feature-item i {
+section.services .feature-item i {
   font-size: 80px;
   display: block;
   margin-bottom: 15px;

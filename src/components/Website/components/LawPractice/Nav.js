@@ -80,19 +80,19 @@ class NavBarComponent extends Component {
                 <Link
                   activeClass="active"
                   className="nav-link js-scroll-trigger"
-                  to="download"
+                  to="services"
                   spy={true}
                   smooth="easeInOutQuart"
                   duration={1000}
                 >
-                  {"Expertises"}
+                  {"Services"}
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   activeClass="active"
                   className="nav-link js-scroll-trigger"
-                  to="features"
+                  to="contact"
                   spy={true}
                   smooth="easeInOutQuart"
                   duration={1000}
@@ -124,7 +124,7 @@ class NavBarComponent extends Component {
                   }}
                 >
                   <i
-                    class="fa fa-language"
+                    className="fa fa-language"
                     aria-hidden="true"
                     style={{ fontSize: 20 }}
                   />
