@@ -45,7 +45,7 @@ const Contact = props => {
             </ContactRow>
             <ContactRow>
               <FaEnvelope />
-              <Par>harveymarcantoine@gmail.com</Par>
+              <Par>phototicketmontreal@gmail.com</Par>
             </ContactRow>
           </div>
         </ContactContaier>

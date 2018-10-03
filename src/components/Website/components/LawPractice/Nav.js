@@ -56,7 +56,7 @@ class NavBarComponent extends Component {
             className="navbar-brand js-scroll-trigger"
             href="#page-top"
           >
-            Maître Harvey, Avocat.
+            Avocats Contraventions Photo-Ticket
           </a>
           <button
             onClick={this.toggleShow.bind(this)}

@@ -124,7 +124,7 @@ const law = {
     en:
       "Former Attorney for the City of Montreal, Mr. Harvey has developed expertise in the field of road traffic offenses.",
     fr:
-      "Ancien procureur de la Couronne pour la Ville de Montréal, Me Harvey a développer une expertise en matière de dossser d'infractions de la route."
+      "Ancien procureur de la Couronne pour la Ville de Montréal, Me Harvey a développé une expertise en matière d'infractions routières."
   },
   available: { en: "Available", fr: "Disponible" },
   disponibilityPar: {
