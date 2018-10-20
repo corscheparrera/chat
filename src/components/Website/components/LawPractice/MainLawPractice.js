@@ -11,7 +11,6 @@ class MainLawPractice extends Component {
         <Nav switchLang={this.props.switchLang} />
         <Landing />
         <Services />
-
         <Contact />
       </div>
     );

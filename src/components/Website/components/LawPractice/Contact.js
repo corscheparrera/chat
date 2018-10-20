@@ -4,6 +4,7 @@ import { FaPhone, FaMapPin, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import styled from "styled-components";
 import polyglot from "../../Translator";
 import translator from "../../Translator";
+
 const ContactContaier = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,7 +24,11 @@ const Par = styled.p`
 `;
 const Contact = props => {
   return (
-    <div id="contact" className="row" style={{ paddingTop: 300 }}>
+    <div
+      id="contact"
+      className="row"
+      style={{ paddingTop: 300, width: "100vw" }}
+    >
       <div className="col-md-8">
         <Carte />
       </div>
