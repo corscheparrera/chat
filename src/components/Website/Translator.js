@@ -106,12 +106,12 @@ const footer = {
 };
 const law = {
   landingMessage1: {
-    en: "Is it possible to save your demerit points?",
-    fr: "Est-il possible de sauver vos points?"
+    en: "Is it possible to save your demerit points",
+    fr: "Est-il possible de sauver vos points"
   },
   landingMessage2: {
-    en: "Reduce the price of your fines.",
-    fr: "Réduisez le montant de vos amendes."
+    en: "or th reduce price of your fines?",
+    fr: "ou de réduire le montant de vos amendes?"
   },
 
   nextTo: {
