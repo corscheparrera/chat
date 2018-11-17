@@ -27,13 +27,18 @@ class Website extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+
     this.handleScroll();
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
-
+  getUserLanguage = () => {
+    const lang = (navigator.language || navigator.userLanguage).slice(0, 2);
+    console.log("lang", lang, "navigator", { navigator });
+    return lang === "fr" || lang === "en" ? lang : "en";
+  };
   handleScroll(event) {
     const domNode = ReactDOM.findDOMNode(this.navEl);
     const nbs = window.pageYOffset > 100 ? "navbar-shrink" : "";
